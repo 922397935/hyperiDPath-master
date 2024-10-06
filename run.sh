@@ -1,0 +1,1 @@
+python train.py --config config/config.json # mpn 256 bs 512

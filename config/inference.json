@@ -1,0 +1,29 @@
+{
+    "name": "hyperiDPath",
+    "n_gpu": 0,
+
+    "arch": {
+        "type": "hyperiDPath",
+        "args": {
+            "emb_dim": 64,
+            "hypergcn_layersize": [64, 128, 64],
+            "dropout": 0.5}
+    },
+    "data_loader": {
+        "type": "PathDataLoader",
+        "args":{
+            "data_dir": "data/",
+            "drug_indication_pd_dir": "test.csv",
+            "max_path_length": 7,
+            "max_path_num": 256,
+            "random_state": 0
+        }
+    },
+
+    "K": 5,
+
+    "trainer": {
+        "save_dir": "saved/",
+        "verbosity": 2
+    }
+}
